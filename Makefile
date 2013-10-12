@@ -8,6 +8,9 @@ DIA_ZOOM = 0.4
 
 all: $(DST_ALL)
 
+deb-install-build-dep:
+	aptitude install dia librsvg2-bin python-docutils python-scour
+
 %.svg: %.dia Makefile
 	dia -e /dev/stdout -t svg "$<" \
 	  | rsvg-convert -z $(DIA_ZOOM) -f svg /dev/stdin \
