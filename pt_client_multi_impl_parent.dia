@@ -117,7 +117,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="cpl_north">
-        <dia:int val="4"/>
+        <dia:int val="3"/>
       </dia:attribute>
       <dia:attribute name="cpl_west">
         <dia:int val="3"/>
@@ -783,7 +783,7 @@ to A[1]#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O30" connection="11"/>
+        <dia:connection handle="0" to="O30" connection="10"/>
         <dia:connection handle="1" to="O11" connection="5"/>
       </dia:connections>
     </dia:object>
@@ -1080,7 +1080,7 @@ to A[2]#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O30" connection="11"/>
+        <dia:connection handle="0" to="O30" connection="10"/>
         <dia:connection handle="1" to="O17" connection="5"/>
       </dia:connections>
     </dia:object>
@@ -1377,7 +1377,7 @@ to A[3]#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O30" connection="11"/>
+        <dia:connection handle="0" to="O30" connection="10"/>
         <dia:connection handle="1" to="O23" connection="5"/>
       </dia:connections>
     </dia:object>
@@ -1569,7 +1569,9 @@ to A[3]#</dia:string>
             <dia:string>#PT composer
 similar to
 obfs-flash,
-SOCKS server#</dia:string>
+SOCKS server,
+listens on addr
+A[0]#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="80" name="Helvetica-Bold"/>
@@ -1578,7 +1580,7 @@ SOCKS server#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="16,12.995"/>
+            <dia:point val="16,12.195"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -1598,7 +1600,7 @@ SOCKS server#</dia:string>
         <dia:string>#A0#</dia:string>
       </dia:attribute>
       <dia:attribute name="cpl_north">
-        <dia:int val="4"/>
+        <dia:int val="3"/>
       </dia:attribute>
       <dia:attribute name="cpl_west">
         <dia:int val="6"/>
@@ -1641,8 +1643,8 @@ SOCKS server#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O0" connection="9"/>
-        <dia:connection handle="1" to="O30" connection="5"/>
+        <dia:connection handle="0" to="O0" connection="8"/>
+        <dia:connection handle="1" to="O30" connection="4"/>
       </dia:connections>
     </dia:object>
     <dia:object type="SADT - annotation" version="0" id="O32">
@@ -1650,7 +1652,7 @@ SOCKS server#</dia:string>
         <dia:point val="10,8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="4.6825,7.165;10.24,11.11"/>
+        <dia:rectangle val="4.48,7.14637;10.2586,10.3473"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -1665,8 +1667,7 @@ SOCKS server#</dia:string>
             <dia:string>#(U[1], A, SS)
 over SOCKS,
 where SS
-= A[3]+A[2]
-+S[3]+S[2]+S[1]#</dia:string>
+= S[3]+S[2]+S[1]#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="0" name="Helvetica"/>
@@ -1691,6 +1692,158 @@ where SS
       <dia:connections>
         <dia:connection handle="0" to="O31" connection="1"/>
         <dia:connection handle="1" to="O31" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - arrow" version="0" id="O33">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,-4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1.95,-4.05;2.05,0"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="2,-4"/>
+        <dia:point val="2,0"/>
+        <dia:point val="2,0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="arrow_style">
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autogray">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="1" to="O0" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - annotation" version="0" id="O34">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,-2"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="2,-2.835;3.585,-2"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="2,-2"/>
+        <dia:point val="2,-2"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#A[0]#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.80000000000000004"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="2.24,-2.24"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O33" connection="0"/>
+        <dia:connection handle="1" to="O33" connection="0"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - arrow" version="0" id="O35">
+      <dia:attribute name="obj_pos">
+        <dia:point val="16,-4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="15.95,-4.05;16.05,0"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="16,-4"/>
+        <dia:point val="16,0"/>
+        <dia:point val="16,0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="arrow_style">
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autogray">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="1" to="O30" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - annotation" version="0" id="O36">
+      <dia:attribute name="obj_pos">
+        <dia:point val="16,-2"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="16,-2.835;21.35,-2"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="16,-2"/>
+        <dia:point val="16,-2"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#A[1]+A[2]+A[3]#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.80000000000000004"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="16.24,-2.24"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O35" connection="0"/>
+        <dia:connection handle="1" to="O35" connection="0"/>
       </dia:connections>
     </dia:object>
   </dia:layer>

@@ -117,7 +117,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="cpl_north">
-        <dia:int val="4"/>
+        <dia:int val="3"/>
       </dia:attribute>
       <dia:attribute name="cpl_west">
         <dia:int val="3"/>
@@ -230,7 +230,7 @@ A[1]#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O0" connection="9"/>
+        <dia:connection handle="0" to="O0" connection="8"/>
         <dia:connection handle="1" to="O1" connection="5"/>
       </dia:connections>
     </dia:object>
@@ -239,7 +239,7 @@ A[1]#</dia:string>
         <dia:point val="10,8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="4.4875,7.14637;10.2586,11.1472"/>
+        <dia:rectangle val="4.4875,7.165;10.24,11.11"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -878,7 +878,7 @@ A[3]#</dia:string>
         <dia:point val="30,8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="24.4875,7.14637;30.2586,11.1472"/>
+        <dia:rectangle val="24.4875,7.165;30.24,11.11"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -1001,6 +1001,82 @@ where SS[3]
       <dia:connections>
         <dia:connection handle="0" to="O15" connection="1"/>
         <dia:connection handle="1" to="O15" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - arrow" version="0" id="O17">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,-4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1.95,-4.05;2.05,0"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="2,-4"/>
+        <dia:point val="2,0"/>
+        <dia:point val="2,0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="arrow_style">
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autogray">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="1" to="O0" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="SADT - annotation" version="0" id="O18">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,-2"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="2,-2.85363;7.36863,-2"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="2,-2"/>
+        <dia:point val="2,-2"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#A[1]+A[2]+A[3]#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.80000000000000004"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="2.24,-2.24"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O17" connection="0"/>
+        <dia:connection handle="1" to="O17" connection="0"/>
       </dia:connections>
     </dia:object>
   </dia:layer>
